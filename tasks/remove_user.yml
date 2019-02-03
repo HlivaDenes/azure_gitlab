@@ -1,0 +1,55 @@
+- name: Remove the user 'diak'
+  user:
+    name: diak
+    state: absent
+    remove: yes
+
+- name: Remove the user 'c10'
+  user:
+    name: c10
+    state: absent
+    remove: yes
+    
+- name: Remove the user 'c11'
+  user:
+    name: c11
+    state: absent
+    remove: yes
+
+- name: Remove the user 'd10'
+  user:
+    name: d10
+    state: absent
+    remove: yes
+    
+- name: Remove the user 'd11'
+  user:
+    name: d11
+    state: absent
+    remove: yes
+    
+- name: Remove the user 'd13'
+  user:
+    name: d13
+    state: absent
+    remove: yes
+    
+- name: Remove the user 'c14'
+  user:
+    name: c14
+    state: absent
+    remove: yes 
+    
+- name: Remove the user 'd14'
+  user:
+    name: d14
+    state: absent
+    remove: yes   
+    
+- name: Remove the user 'esti'
+  user:
+    name: esti
+    state: absent
+    remove: yes
+    
+    

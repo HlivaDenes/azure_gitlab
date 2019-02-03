@@ -1,0 +1,35 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: update repositories
+      apt: update_cache=yes
+      changed_when: False
+      
+    - name: create ansible user
+      user: name=ansible uid=900 
+
+  handlers:
+    - name: restart_sshd
+      service:
+        name: sshd
+        state: restarted
+  vars:
+    - apt_file: /etc/apt/sources.list.d/google-chrome.list
+
+  tasks:
+    #- include: tasks/passwordless.yml
+    #- include: tasks/packages.yml
+    - include: tasks/authorized.yml  
+    #- include: tasks/sshd_password.yml
+    #- include: tasks/grub_recovery.yml
+    - include: tasks/docker.yml
+    #- include: tasks/virtualbox.yml
+    - include: tasks/cron.yml
+    #- include: tasks/epoptes.yml
+    #- include: tasks/get_url.yml
+    #- include: tasks/get_ubuntu.yml
+    #- include: tasks/resolved.yml
+    #- include: tasks/users.yml
+    #- include: tasks/remove_user.yml
+    #- include: tasks/gnome.yml
+#2019.02.13a

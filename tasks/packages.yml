@@ -1,0 +1,14 @@
+- name: "apt instal git mc curl opensh-server gdebi-core cifs-utils"
+  apt: 
+    name: ['git','mc','curl','openssh-server','gdebi-core','cifs-utils']
+    state: present
+    update_cache: yes
+
+- name: "apt install vlc gnome-tweak-tool guake guake-indicator terminator"
+  apt:
+    name: ['vlc','gnome-tweak-tool','guake','guake-indicator','terminator']
+    state: present
+    update_cache: yes
+  
+
+
